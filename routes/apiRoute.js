@@ -1,11 +1,11 @@
 const express = require("express");
-const studentController = require("../controllers/studentController");
+const hospitalController = require("../controllers/hospitalsController");
 const apiRouter = express.Router();
 
 // Root path:/
-apiRouter.get("/",studentController.handleGreeting);
+apiRouter.get("/",hospitalController.handleGreeting);
 
-// Student path: / students
-apiRouter.get("/students", studentController.handleGetStudents);
+// hospital path: / hospitals
+apiRouter.get("/hospital", hospitalController.handleGetHospitals);
 
 module.exports = apiRouter;
